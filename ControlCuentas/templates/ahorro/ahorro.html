@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Ahorros {% endblock %}
+
+{% block 'content' %}
+
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong> La operacion se ha concretado de manera exitosa.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<h1>Ahorros</h1>
+
+<span class="btn-aux"><a class="btn btn-danger" href="{% url 'agregarahorro' %}"><strong>+ &nbsp;Nuevo Ahorro</strong></a></span>
+
+<ul class="list">
+    {% for ahorro in todo %}
+        <li><strong>{{ahorro}}</strong> <span id="fechas">{{ahorro.fecha}}</span> <span><a class="btn btn-danger" href="{% url 'detalleahorro' id=ahorro.id %}">Ver</a>
+            <a class="btn btn-danger" href="{% url 'actualizarahorro'  %}">Actualizar</a> 
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ ahorro.id }}">
+                    Borrar
+              </button></span>
+              {% include 'alerta_eliminar/eliminar_ahorro.html' %}
+        </li>
+        
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

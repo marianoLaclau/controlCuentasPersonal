@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Ver Detalles {% endblock %}
+
+{% block 'content' %}
+
+<h1>Ver detalles</h1>
+
+{% if detalles %}
+    <span class="btn-atras btn btn-success"><a href="{% url 'ahorro' %}">Volver atrás</a></span>
+    <ul id="list-detail">
+        <li>Tipo: &nbsp; <strong>{{detalles.tipo}}</strong></li>
+        <li>Monto: &nbsp; <strong>{{detalles.monto}}</strong></li>
+    </ul>
+{% else %}
+    <p>No se pudo cargar la informacion.</p>
+{% endif %}
+
+{% endblock %}

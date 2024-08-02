@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Ingresos {% endblock %}
+
+{% block 'content' %}
+
+{% if messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {% for message in messages %}
+            <strong>{{ message }}</strong> El Nuevo ingreso se registró de forma exitosa.
+        {% endfor %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{% endif %}
+
+<h1 class='titulos'>Ingresos</h1>
+
+<span class="btn-aux"><a class="btn btn-danger" href="{% url 'crear' %}"><strong>+ &nbsp;Nuevo Registro</strong></a></span>
+
+<ul class="list">
+    {% for ingreso in todo %}
+        <li><strong>{{ingreso}}</strong> <span>{{ingreso.fecha}}</span> <span>${{ingreso.monto}}</span></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

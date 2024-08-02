@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Ver Detalles {% endblock %}
+
+{% block 'content' %}
+
+<h1>Ver detalles</h1>
+
+{% if detalles %}
+    <span class="btn-atras btn btn-success"><a href="{% url 'egreso' %}">Volver atrás</a></span>
+    <ul id="list-detail">
+        <li>Categoria: &nbsp; <strong>{{detalles.categoria}}</strong></li>
+        <li>Concepto: &nbsp; <strong>{{detalles.concepto}}</strong></li>
+        <li>Monto: &nbsp; <strong>{{detalles.monto}}</strong></li>
+        <li>Fecha: &nbsp; <strong>{{detalles.fecha}}</strong></li>
+    </ul>
+{% else %}
+    <p>No se pudo cargar la informacion.</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+.cardp {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: blueviolet;
+    border-radius: 10px;
+    height: 20vh;
+    margin: 5% auto;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.cards:hover {
+    background-color: darkmagenta;
+    color: white;
+    font-weight: bold;
+}
+
+.vaciar {
+
+    position: relative;
+    margin-top: 4%;
+}
+
+
+.logo {
+    color: white!important;
+    margin: auto 2%!important;
+}

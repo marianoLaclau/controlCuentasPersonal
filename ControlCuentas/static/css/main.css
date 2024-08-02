@@ -1,0 +1,53 @@
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 2% auto;
+}
+
+
+input[type="text"] {
+    margin: 5%;
+}
+
+
+.menues {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.btn-aux {
+    width: max-content;
+    display: flex;
+    justify-content: flex-start;
+    margin: 1% 1%;
+}
+
+.btn-aux a{
+    width: max-content;
+}
+
+
+
+.btn-atras {
+    margin: 1% auto;
+}
+
+.btn-atras a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-atras a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.titulos {
+    margin: 2% auto;
+}

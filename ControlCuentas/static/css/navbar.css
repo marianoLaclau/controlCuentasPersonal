@@ -1,0 +1,37 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: blueviolet;
+    padding: 1%;
+}
+
+.collapse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav  ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .collapse .navbar-nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 1%;
+    margin: auto 1%;
+}
+
+nav ul li a:hover {
+    color: lightgray;
+}
+
+
+

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Egresos {% endblock %}
+
+{% block 'content' %}
+
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<h1 class='titulos'>Egresos</h1>
+
+<div class="menues">
+    <span  class="btn-aux"><a class="btn btn-danger" href="{% url 'crearegreso' %}"><strong>+&nbsp;Nuevo Registro</strong> </a></span> 
+    <span class="btn-aux">
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categoria
+            </button>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'egreso_cat' categoria=1 %}">Deudas(Creditos-Tarjetas)</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_cat' categoria=2 %}">Servicios</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_cat' categoria=3 %}">Gastos Varios</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso' %}">Todos</a></li>
+            </ul>
+        </div>
+    </span>
+    <span class="btn-aux">
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Mes
+            </button>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=1 %}">Enero</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=2 %}">Febrero</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=3 %}">Marzo</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=4 %}">Abril</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=5 %}">Mayo</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=6 %}">Junio</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=7 %}">Julio</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=8 %}">Agosto</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=9 %}">Septiembre</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=10 %}">Octubre</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=11 %}">Noviembre</a></li>
+            <li><a class="dropdown-item" href="{% url 'egreso_mes' mes=12 %}">Diciembre</a></li>
+            </ul>
+        </div>
+    </span>
+</div>
+
+<ul class="list">
+    {% for egreso in todo %}
+        <li><strong>{{egreso}}</strong> 
+            <span style="position: relative;">  
+                <p class="monto"> {{egreso.fecha|date:"M."}} &nbsp;|&nbsp;${{egreso.monto}}</p> 
+                <a class="btn btn-danger" href="{% url 'detallesegreso' id=egreso.id %}">Ver</a>
+            </span>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

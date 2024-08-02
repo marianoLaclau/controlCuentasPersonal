@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Inicio {% endblock %}
+
+{% block 'content' %}
+
+{% if messages %}
+    <ul>
+    {% for message in messages %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{message}}.</strong> 
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+        </div>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<h1>Bienvenido a tu gestor personal.</h1>
+
+<div class="cardp">
+    <a href="{% url 'ingreso' %}" class="cards">Registrar Ingreso</a>
+    <a href="{% url 'egreso' %}" class="cards">Registrar Egreso</a>
+    <a href="{% url 'ahorro' %}" class="cards">Ahorros</a>
+    <a href="{% url 'metricas' %}" class="cards">Ver Metricas</a>
+</div>
+
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Borrar todos los datos
+</button>
+
+{% include 'alerta_eliminar/eliminar_todo.html' %}
+
+{% endblock %}

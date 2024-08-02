@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Agregar Egreso {% endblock %}
+
+{% block 'content' %}
+
+<h1 class='titulos'>Registrar Egreso</h1>
+
+<span class='btn-atras btn btn-success'><a href="{% url 'egreso' %}">Volver atrás</a></span>
+
+<form action="{% url 'crearegreso' %}" method="POST">
+    {% csrf_token %}
+    <table class="tabla">
+        {{form.as_table}}
+    </table> <br>
+    <input type ='submit' value="Guardar" class="btn btn-danger">
+</form>
+
+{% endblock %}

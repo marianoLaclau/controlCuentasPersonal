@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block  'title' %} Nuevo Ahorro {% endblock %}
+
+{% block 'content' %}
+
+<h1 class='titulos'>Nuevo Ahorro</h1>
+
+<span class='btn-atras btn btn-success'><a href="{% url 'ahorro' %}">Volver atrás</a></span>
+
+<form action="{% url 'agregarahorro' %}" method="POST">
+    {% csrf_token %}
+    <table class="tabla">
+        {{form.as_table}}
+    </table> <br>
+    <input type ='submit' value="Guardar" class="btn btn-danger">
+</form>
+
+{% endblock %}

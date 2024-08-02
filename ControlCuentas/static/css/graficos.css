@@ -1,0 +1,66 @@
+.graficos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1% 5%;
+
+}
+
+.graficos-container hr {
+ 
+    width: 80%;
+   
+
+}
+
+.grafico-interno{
+    margin : 2% auto ;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.grafico-interno img{
+
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+  }
+
+  .slides img {
+    width: 100%;
+    
+  }
+
+  .controls {
+    position: absolute;
+    bottom: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5%;
+  }
+
+  .dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+  }

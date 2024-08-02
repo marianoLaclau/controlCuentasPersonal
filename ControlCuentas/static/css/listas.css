@@ -1,0 +1,62 @@
+.list {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50%;
+    list-style-type: none;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.list li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+
+}
+
+.list li span {
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.list li span a{
+   margin: 1% 1%;
+}
+
+.list li span button{
+    margin: 1% 1%;
+ }
+
+
+#list-detail  {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50%;
+    list-style-type: none;
+    flex-direction: column;
+    padding: 1%;
+}
+
+#list-detail li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.monto {
+    position: absolute; 
+    top: 20%; 
+    right: 30%;
+
+}
+
+#id_monto  {
+    margin: 8% auto;
+}
