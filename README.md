@@ -2,6 +2,7 @@
 Este proyecto es una aplicación web de Control de Gastos diseñada para ayudar a los usuarios a gestionar sus finanzas personales.
 La aplicación permite a los usuarios registrar ingresos y egresos, categorizarlos, y generar métricas en tiempo real 
 para un mejor análisis y comprensión de sus hábitos financieros.
+Actualmente el desarrollo del backend esta completo y funcional . En cuanto al front-end , esta en etapa inicial , su desarrollo es basico y a modo de prueba para el backend.
 
 # Características Principales
 * **Registro de Usuarios:** Los usuarios pueden registrarse, iniciar sesión y gestionar sus propias cuentas de manera segura.
